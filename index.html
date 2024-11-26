@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SYNERGY HomeCare® | Tell Us How We Did!</title>
+  <!-- Link to External CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Link to Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="images/blueheart.png">
+</head>
+<body>
+  <!-- Background Gradient -->
+  <div id="background-gradient"></div>
+
+  <div class="form-container">
+    
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+    
+    <!-- Logo/Image Placeholder -->
+    <div class="logo-container">
+      <img src="images/logo.png" alt="SYNERGY HomeCare Logo" class="logo">
+    </div>
+    
+    <!-- Introduction Section -->
+    <div id="introduction" class="form-step active">
+      <h2>How was your care? Let us know here!</h2>
+      <div class="text-content">
+        <p>
+          Thank you so so much for taking the time out of your day to give us a review.<br><br> Your words mean
+          the world to us, so please be as honest as you can so we can aim to improve ourselves!
+        </p>
+      </div>
+      <button id="start-feedback" class="btn">Start Feedback</button>
+    </div>
+    
+    <!-- Step 1: Optional Name Field -->
+    <div id="step-1" class="form-step">
+      <h2>Please enter your name (optional):</h2>
+      <input type="text" id="user-name" placeholder="Anonymous" class="input-field">
+      <p class="description">You may choose to remain anonymous.</p>
+      <div class="navigation-buttons">
+        <button id="next-btn-1" class="btn">Next</button>
+      </div>
+    </div>
+    
+    <!-- Step 2: Satisfaction with Caregiver -->
+    <div id="step-2" class="form-step">
+      <h2>How satisfied are you with our caregiver's performance?</h2>
+      <div class="slider-container">
+        <input type="range" min="1" max="5" value="3" class="slider" id="satisfaction-slider">
+        <div class="slider-value" id="slider-value">3</div>
+      </div>
+      <div class="navigation-buttons">
+        <button id="prev-btn-2" class="btn prev-btn">Previous</button>
+        <button id="next-btn-2" class="btn">Next</button>
+      </div>
+    </div>
+    
+    <!-- Step 3: Communication with Office -->
+    <div id="step-3" class="form-step">
+      <h2>How was communication with the office?</h2>
+      <div class="slider-container">
+        <input type="range" min="1" max="5" value="3" class="slider" id="communication-slider">
+        <div class="slider-value" id="communication-value">3</div>
+      </div>
+      <div class="navigation-buttons">
+        <button id="prev-btn-3" class="btn prev-btn">Previous</button>
+        <button id="next-btn-3" class="btn">Next</button>
+      </div>
+    </div>
+    
+    <!-- Step 4: Recommendation Likelihood -->
+    <div id="step-4" class="form-step">
+      <h2>How would you recommend SYNERGY to a friend or family member?</h2>
+      <div class="slider-container">
+        <input type="range" min="1" max="5" value="3" class="slider" id="recommendation-slider">
+        <div class="slider-value" id="recommendation-value">3</div>
+      </div>
+      <div class="navigation-buttons">
+        <button id="prev-btn-4" class="btn prev-btn">Previous</button>
+        <button id="next-btn-4" class="btn">Next</button>
+      </div>
+    </div>
+    
+    <!-- Step 5: Additional Comments -->
+    <div id="step-5" class="form-step">
+      <h2>Please provide any additional comments:</h2>
+      <div class="textarea-container">
+        <textarea id="comments" rows="4" placeholder="Your comments..." maxlength="300"></textarea>
+        <span id="char-counter">150</span>
+      </div>
+      <div class="navigation-buttons">
+        <button id="prev-btn-5" class="btn prev-btn">Previous</button>
+        <button id="submit-btn" class="btn">Submit</button>
+      </div>
+    </div>
+    
+    <!-- Review Prompt with Big Button -->
+    <div id="review" class="form-step">
+      <h2>Just One More Step!</h2>
+      <div class="text-content">
+        <p>We appreciate your time, but what would be amazing is if you could let other people know how great your experience was! We strive to grow and your review will surely assist us.</p>
+      </div>
+      <div class="navigation-buttons">
+        <button id="leave-review" class="btn">Leave A Review</button>
+      </div>
+        <button id="close-form" class="btn leave-review-btn">CLOSE WINDOW</button>
+    </div>
+    
+    <!-- Thank You Message with Small Button -->
+    <div id="thank-you" class="form-step">
+      <h2>Thank you for your feedback!</h2>
+      <div class="text-content">
+        <p>We appreciate your time. We take all reviews seriously and will utilize this to improve our care from the inside!</p>
+      </div>
+      <div class="navigation-buttons">
+        <button id="close-form-2" class="btn">Close</button>
+      </div>
+      <!-- Small, inconspicuous Leave a Review Button -->
+      <button id="leave-review-2" class="btn leave-review-btn small-btn">Leave a Review</button>
+    </div>
+    
+  </div>
+  
+  <!-- Link to External JS -->
+  <script src="script.js"></script>
+</body>
+</html>
