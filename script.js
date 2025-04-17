@@ -169,12 +169,18 @@ document.addEventListener('DOMContentLoaded', function() {
     submitBtn.innerText = 'Submitting...';
 
     // Send data to the backend API
-    fetch('https://sheetdb.io/api/v1/0v3iog12vgca3', { // Replace with your actual GAS Web App URL
+    fetch('https://script.google.com/macros/s/AKfycbymXZn12ysknO6K4tFEbzf3FXF_sHuA7nZm99Gy7cgKjDLdfdbp-liPguiKLptJDOKZ/exec', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ data: [dataToSubmit] })
+      body: JSON.stringify({
+        name: formData.name || 'Anonymous',
+        satisfaction: formData.satisfaction || '',
+        communication: formData.communication || '',
+        recommendation: formData.recommendation || '',
+        comments: formData.comments || ''
+      })
     })
     .then(response => response.json())
     .then(data => {
