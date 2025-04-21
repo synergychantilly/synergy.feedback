@@ -171,12 +171,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Send data to the backend API
     fetch('https://script.google.com/macros/s/AKfycbymXZn12ysknO6K4tFEbzf3FXF_sHuA7nZm99Gy7cgKjDLdfdbp-liPguiKLptJDOKZ/exec', {
       method: 'POST',
+      headers: {
+          'Content-Type': 'application/json' // <-- ADD THIS HEADER
+      },
       body: JSON.stringify({
-        name: formData.name || 'Anonymous',
-        satisfaction: formData.satisfaction || '',
-        communication: formData.communication || '',
-        recommendation: formData.recommendation || '',
-        comments: formData.comments || ''
+          name: formData.name || 'Anonymous',
+          satisfaction: formData.satisfaction || '',
+          communication: formData.communication || '',
+          recommendation: formData.recommendation || '',
+          comments: formData.comments || ''
       })
     })
     .then(response => response.json())
