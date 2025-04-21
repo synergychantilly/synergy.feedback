@@ -169,7 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
     submitBtn.innerText = 'Submitting...';
 
     // Send data to the backend API
-    fetch('https://script.google.com/macros/s/AKfycbxitw8bLPaN95drkxwczma3E9hDbzqB4Xufn5a7B3G5tjnaIFkw8KvFiSSiKaxMu6zE/exec', {
+    fetch('https://sheetdb.io/api/v1/0v3iog12vgca3', {
       method: 'POST',
       headers: {
           'Content-Type': 'application/json' // <-- ADD THIS HEADER
